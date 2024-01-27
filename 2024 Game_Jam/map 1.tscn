@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6w43hlq2m0d"]
+
+[ext_resource type="PackedScene" uid="uid://dlpsf3ub6cwyu" path="res://cleaning_peps.tscn" id="1_ghe56"]
+
+[sub_resource type="Curve2D" id="Curve2D_27tal"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 13, 745, 0, 0, 0, 0, 145, 746, 0, 0, 0, 0, 171, 720, 0, 0, 0, 0, 173, 635, 0, 0, 0, 0, 192, 619, 0, 0, 0, 0, 328, 618, 0, 0, 0, 0, 359, 630, 0, 0, 0, 0, 363, 852, 0, 0, 0, 0, 343, 872, 0, 0, 0, 0, 196, 873, 0, 0, 0, 0, 173, 893, 0, 0, 0, 0, 172, 1176, 0, 0, 0, 0, 196, 1194, 0, 0, 0, 0, 980, 1194, 0, 0, 0, 0, 1002, 1178, 0, 0, 0, 0, 1002, 1085, 0, 0, 0, 0, 980, 1065, 0, 0, 0, 0, 769, 1064, 0, 0, 0, 0, 751, 1051, 0, 0, 0, 0, 746, 834, 0, 0, 0, 0, 768, 811, 0, 0, 0, 0, 1295, 809, 0, 0, 0, 0, 1324, 828, 0, 0, 0, 0, 1323, 1104, 0, 0, 0, 0, 1308, 1129, 0, 0, 0, 0, 1212, 1132, 0, 0, 0, 0, 1197, 1156, 0, 0, 0, 0, 1195, 1235, 0, 0, 0, 0, 1219, 1256, 0, 0, 0, 0, 1419, 1256)
+}
+point_count = 30
+
+[node name="Path2D" type="Path2D"]
+position = Vector2(3, 12)
+curve = SubResource("Curve2D_27tal")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(13, 745)
+rotation = 0.00757561
+rotates = false
+loop = false
+
+[node name="Soap" parent="PathFollow2D" instance=ExtResource("1_ghe56")]
+position = Vector2(-18.6434, -744.88)
+rotation = -0.00757561
